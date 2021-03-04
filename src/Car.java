@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.List;
 
-
+//purpose: create the car class
 //Name: Harman Kaur
 //Student Id: 200456178
 public class Car {
