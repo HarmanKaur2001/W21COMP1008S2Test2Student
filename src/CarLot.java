@@ -19,7 +19,12 @@ public class CarLot {
 
     public double getInventoryValue()
     {
-        return -1;
+        double price = 0;
+
+        for (Car newCar : cars)
+            price =  price + newCar.getPrice();
+
+        return price;
     }
 
     public ArrayList<Car> getCarsByBrand(String manufacturer)
@@ -61,4 +66,6 @@ public class CarLot {
     {
         return "";
     }
+
+
 }
