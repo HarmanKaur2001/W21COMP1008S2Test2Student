@@ -29,7 +29,16 @@ public class CarLot {
 
     public ArrayList<Car> getCarsByBrand(String manufacturer)
     {
-        return null;
+        ArrayList<Car> cars1 = new ArrayList<>();
+
+        if (cars1.size()==0)
+            return (ArrayList<Car>) cars1;
+
+        for (Car car : cars)
+            if(car.getMake().equals(manufacturer))
+                cars1.add(car);
+        return cars1;
+
     }
 
     public ArrayList<Car> getCarsByModel(String model)
@@ -54,6 +63,7 @@ public class CarLot {
 
     public double getAvgPrice()
     {
+
         return -1;
     }
 
