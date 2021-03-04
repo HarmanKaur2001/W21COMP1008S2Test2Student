@@ -47,12 +47,6 @@ public class Car {
     }
 
     public void setModel(String model) {
-        List<String> fordModels = Arrays.asList("Ford","Honda","Porsche");
-        if (fordModels.contains(model))  // this performs a case sensitive comparison
-            this.model = make;
-        else
-            throw new IllegalArgumentException(make + " is not valid.  Use one of "+ fordModels);
-
     }
 
     public void setMileage(int mileage) {
@@ -65,6 +59,12 @@ public class Car {
     }
 
     public void setPrice(double price) {
+        int min = 0;
+        int max = 2000000;
+        if (price>=min && price <=max)
+            this.price = price;
+        else
+            throw new IllegalArgumentException(price +"has no value"+ price);
     }
 
     public String toString()
