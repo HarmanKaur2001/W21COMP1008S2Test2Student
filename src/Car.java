@@ -20,6 +20,7 @@ public class Car {
         return make;
     }
 
+
     public String getModel() {
         return model;
     }
@@ -33,6 +34,11 @@ public class Car {
     }
 
     public void setMake(String make) {
+        List<String> validSuits = Arrays.asList("Ford","Honda","Porsche");
+        if (validSuits.contains(make))  // this performs a case sensitive comparison
+            this.make = make;
+        else
+            throw new IllegalArgumentException(make + " is not valid.  Use one of "+validSuits);
 
     }
 
