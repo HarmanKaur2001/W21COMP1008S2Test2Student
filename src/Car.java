@@ -1,5 +1,7 @@
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.List;
+import java.util.Locale;
 
 //purpose: create the car class
 //Name: Harman Kaur
@@ -40,12 +42,26 @@ public class Car {
         else
             throw new IllegalArgumentException(make + " is not valid.  Use one of "+validSuits);
 
+
+
     }
 
     public void setModel(String model) {
+        List<String> fordModels = Arrays.asList("Ford","Honda","Porsche");
+        if (fordModels.contains(model))  // this performs a case sensitive comparison
+            this.model = make;
+        else
+            throw new IllegalArgumentException(make + " is not valid.  Use one of "+ fordModels);
+
     }
 
     public void setMileage(int mileage) {
+        int min = 0;
+        int max = 5000000;
+        if (mileage>=min && mileage <=max)
+            this.mileage = mileage;
+        else
+            throw new IllegalArgumentException(mileage +"has no value"+ mileage);
     }
 
     public void setPrice(double price) {
