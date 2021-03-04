@@ -39,13 +39,42 @@ public class Car {
             this.make = make;
         else
             throw new IllegalArgumentException(make + " is not valid.  Use one of "+validSuits);
-
-
-
     }
 
     public void setModel(String model) {
+            if (make == "Ford"){
 
+                List<String> models = Arrays.asList("F150","Escort","Explorer");
+                if (models.contains(model)){
+                    this.model = model;
+                }
+                else
+                {
+                    throw new IllegalArgumentException(model + "no validity"+ models);
+                }
+            }
+        if (make == "Honda"){
+
+            List<String> models = Arrays.asList("Accord","Civic","Pilot");
+            if (models.contains(model)){
+                this.model = model;
+            }
+            else
+            {
+                throw new IllegalArgumentException(model + "no validity"+ models);
+            }
+        }
+        if (make == "Porsche"){
+
+            List<String> models = Arrays.asList("911","Cayman","718 Boxster");
+            if (models.contains(model)){
+                this.model = model;
+            }
+            else
+            {
+                throw new IllegalArgumentException(model + "no validity"+ models);
+            }
+        }
     }
 
     public void setMileage(int mileage) {
