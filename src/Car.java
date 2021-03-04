@@ -67,8 +67,10 @@ public class Car {
             throw new IllegalArgumentException(price +"has no value"+ price);
     }
 
+
+
     public String toString()
     {
-        return "";
+        return String.format("%s %s, with %d km - asking $%.2f", make, model,mileage,price);
     }
 }
