@@ -1,4 +1,6 @@
+import java.sql.ClientInfoStatus;
 import java.util.ArrayList;
+import java.util.List;
 
 
 //Name: Harman Kaur
@@ -7,10 +9,12 @@ public class CarLot {
     private ArrayList<Car> cars;
 
     public CarLot(){
+        cars= new ArrayList<>();
     }
 
     public void addCar(Car car)
     {
+        cars.add(car);
     }
 
     public double getInventoryValue()

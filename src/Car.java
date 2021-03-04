@@ -1,7 +1,4 @@
-import java.util.Arrays;
-import java.util.InputMismatchException;
-import java.util.List;
-import java.util.Locale;
+import java.util.*;
 
 //purpose: create the car class
 //Name: Harman Kaur
@@ -16,6 +13,7 @@ public class Car {
         setModel(model);
         setMileage(mileage);
         setPrice(price);
+
     }
 
     public String getMake() {
@@ -47,6 +45,7 @@ public class Car {
     }
 
     public void setModel(String model) {
+
     }
 
     public void setMileage(int mileage) {
